@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ContentComponent } from './content/content.component';
     ContentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent,NavbarComponent,UsersListComponent,FooterComponent]

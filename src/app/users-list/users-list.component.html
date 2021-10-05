@@ -46,6 +46,10 @@
 <!-- """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""-->
 
 <br>
+<div class="input-group mb-3">
+	<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" [(ngModel)]="inputCategory">
+	<button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+</div>
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
@@ -64,7 +68,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr *ngFor ="let user of list"  >
+						<tr *ngFor ="let user of list" [hidden]="!(user.accountCategory.includes(inputCategory)) && (inputCategory)" >
 							<td>
 								<img src="{{user.picture}}" alt="">
 								<a href="#" class="user-link">{{user.firstName}} {{user.lastName}} </a>

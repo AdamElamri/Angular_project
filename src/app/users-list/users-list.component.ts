@@ -12,6 +12,9 @@ export class UsersListComponent implements OnInit {
   list:User[];
   //ngOnInit s'appelle hooks
 
+
+
+
   ngOnInit(): void {
     this.list=[
                 {
@@ -78,5 +81,8 @@ export class UsersListComponent implements OnInit {
     let i=this.list.indexOf(user);
     this.list.splice(i,1);  
   }
+
+  inputCategory:string;
+
 
 }
